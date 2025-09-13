@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:revert": "drizzle-kit migrate:revert",
+    "db:check": "drizzle-kit check",
+    "db:seed": "npx tsx src/lib/db/seed.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.10.0",
@@ -20,7 +23,9 @@
     "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.2",
     "drizzle-orm": "^0.44.5",
+    "drizzle-seed": "^0.3.1",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",
     "next-auth": "^4.24.11",
