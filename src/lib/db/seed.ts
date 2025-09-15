@@ -4,6 +4,9 @@ import { seed } from "drizzle-seed";
 
 async function cleanDatabase() {
   console.log("Cleaning up database...");
+  await db.delete(schema.verificationTokens);
+  await db.delete(schema.sessions);
+  await db.delete(schema.accounts);
   await db.delete(schema.messages);
   await db.delete(schema.chatSessions);
   await db.delete(schema.users);
